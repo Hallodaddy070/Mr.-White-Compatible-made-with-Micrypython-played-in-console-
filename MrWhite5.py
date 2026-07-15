@@ -10,13 +10,6 @@ def puntjes() :
     for i in range(6):
       print("")
 
-def custom_shuffle(a_list):
-    # Implements a shuffle without random.shuffle()
-    n = len(a_list)
-    for i in range(n - 1, 0, -1):
-        j = random.randint(0, i)  # Pick a random index from 0 to i
-        a_list[i], a_list[j] = a_list[j], a_list[i]  # Swap elements
-
 Innocents = []
 words=[
 "toothpaste", "hairbrush", "toothpick", "toothache", "sunlight", "moonlight", "snowball", "snowflake",
@@ -227,8 +220,6 @@ undercover_mapping = {
 "earthworm": "worm", "earthrise": "sunrise", "sandpaper": "paper", "sandbox": "sand",
 "bookend": "book", "bookshop": "store", "bookworm": "reader"
 }
-
-custom_shuffle(words)
 
 while running :
   puntjes()
@@ -532,8 +523,6 @@ while running :
         user_choice_final = input()
 
         if user_choice_final == '1':
-           if guess_counter % 2 == 0:
-               custom_shuffle(words)
            print("Starting new round...")
            break
 
